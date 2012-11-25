@@ -1,7 +1,7 @@
 impress-code-highlighter
 ========================
 
-A simple tool to highlight source code blocks in LibreOffice Impress.
+A simple tool for source code blocks highlighting in LibreOffice Impress.
 
 ## How to test it
  1. Start libreoffice in server mode: `soffice "--accept=socket,host=localhost,port=2002;urp;" tests/teste1.odp`
