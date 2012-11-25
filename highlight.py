@@ -1,8 +1,5 @@
-# Based on: http://code.activestate.com/recipes/576796-python-syntax-highlighting-in-openoffice-impress/
-# 
 # Author: stummjr - <stummjr at gmail>
 # License: MIT
-# Start OO in server mode: libreoffice "--accept=socket,host=localhost,port=2002;urp;"
 from pygments import styles
 from pygments.lexers.agile import PythonLexer
 
@@ -32,10 +29,9 @@ def highlight_code(codebox):
     style = styles.get_style_by_name('default')
     cursor.gotoStart(False)
     for tok_type, tok_value in lexer.get_tokens(codebox.String):
-        cursor.goRight(len(tok_value), True) # selects the token's text
+        cursor.goRight(len(tok_value), True)  # selects the token's text
         cursor.CharColor = to_rgbint(style.style_for_token(tok_type)['color'])
         cursor.goRight(0, False)  # deselects the selected text
-
 
 
 def highlight_all(doc):
@@ -52,10 +48,6 @@ def highlight_all(doc):
 
 
 def remote_get_doc():
-    """
-    Retrieve the document instance when accessing OOo 'out of process', using
-    uno over a socket.
-    """
     import uno
     localContext = uno.getComponentContext()
     resolver = localContext.ServiceManager.createInstanceWithContext(
@@ -68,7 +60,6 @@ def remote_get_doc():
 
 
 g_exportedScripts = (highlight_source_code,)
-
 if __name__ == "__main__":
     doc = remote_get_doc()
     highlight_all(doc)
