@@ -17,4 +17,4 @@ In order to highlight the source code that you want to show in your impress pres
 
 
 ## Disclaimer
-This script been has started as a "fork" from http://code.activestate.com/recipes/576796-python-syntax-highlighting-in-openoffice-impress/
+This script is based on http://code.activestate.com/recipes/576796-python-syntax-highlighting-in-openoffice-impress/
