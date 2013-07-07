@@ -1,7 +1,7 @@
 # Author: stummjr - <stummjr at gmail>
 # License: MIT
 from pygments import styles
-from pygments.lexers.agile import PythonLexer
+from pygments.lexers import (get_lexer_by_name)
 
 
 def highlight_source_code():
@@ -23,8 +23,9 @@ def to_rgbint(hex_str):
     return rgb(0, 0, 0)
 
 
-def highlight_code(codebox):
-    lexer = PythonLexer()
+def highlight_code(styleName, codebox):
+    lang = styleName.replace("code-", "")
+    lexer = get_lexer_by_name(lang)
     cursor = codebox.createTextCursor()
     style = styles.get_style_by_name('default')
     cursor.gotoStart(False)
@@ -43,8 +44,8 @@ def highlight_all(doc):
         for item_idx in xrange(page.getCount()):
             box = page.getByIndex(item_idx)
             if 'com.sun.star.drawing.TextShape' in box.SupportedServiceNames:
-                if box.Style == code:
-                    highlight_code(box)
+                if box.Style.getName().find("code-") == 0:
+                    highlight_code(box.Style.getName(), box)
 
 
 def remote_get_doc():
