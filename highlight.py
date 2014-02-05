@@ -36,8 +36,6 @@ def highlight_code(styleName, codebox):
 
 
 def highlight_all(doc):
-    styles = doc.StyleFamilies.getByName(u'graphics')
-    code = styles.getByName(u'code')
     pages = doc.DrawPages
     for idx in xrange(pages.getCount()):
         page = pages.getByIndex(idx)
