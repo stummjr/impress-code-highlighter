@@ -1,7 +1,7 @@
 impress-code-highlighter
 ========================
 
-A simple tool for source code blocks highlighting in LibreOffice Impress.
+A python macro for source code highlighting in LibreOffice Impress.
 
 ## How to test it
  1. Start libreoffice in server mode: `soffice "--accept=socket,host=localhost,port=2002;urp;" tests/teste1.odp`
@@ -13,7 +13,7 @@ By now, are two ways to use the code highlighter:
  1. Start libreoffice in server mode
  2. Add `highlight.py` as a macro
 
-In order to highlight the source code that you want to show in your impress presentation, you have to create a custom style named `code` and apply it to all the text boxes you want to highlight. Then, you should run `highlight.py` either in a OS shell or as a macro.
+In order to highlight the source code that you want to show in your impress presentation, you have to create a custom style named `code-<language name>` and apply it to all the text boxes you want to highlight. Then, you should run `highlight.py` either in a OS shell or as a macro. For example, to highlight some Python code, you have to apply a style named `code-python` to the code block and then run the macro.
 
 
 ## Disclaimer
