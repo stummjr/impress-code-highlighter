@@ -37,9 +37,9 @@ def highlight_code(styleName, codebox):
 
 def highlight_all(doc):
     pages = doc.DrawPages
-    for idx in xrange(pages.getCount()):
+    for idx in range(pages.getCount()):
         page = pages.getByIndex(idx)
-        for item_idx in xrange(page.getCount()):
+        for item_idx in range(page.getCount()):
             box = page.getByIndex(item_idx)
             if 'com.sun.star.drawing.TextShape' in box.SupportedServiceNames:
                 if box.Style.getName().find("code-") == 0:
