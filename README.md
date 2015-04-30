@@ -15,7 +15,7 @@ By now, there are two ways to use the code highlighter:
 
 In order to highlight your source code in your impress presentation, you should create a custom style named `code-<language name>` and apply it to all the text boxes you'd want to highlight. Then, you should run `highlight.py` either in an OS shell or as a macro inside Impress.
 
-For example, to highlight some Python code blocks, you have to apply a style named `code-python` to the code block and then run the macro.
+For example, to highlight some Python code blocks, you have to apply a style named `code-python` to the code blocks and then run the macro.
 
 
 ## Dependencies
