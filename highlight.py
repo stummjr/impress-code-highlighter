@@ -4,7 +4,7 @@ from pygments import styles
 from pygments.lexers import (get_lexer_by_name)
 
 
-def highlight_source_code():
+def highlight_source_code(*args):
     ctx = XSCRIPTCONTEXT
     doc = ctx.getDocument()
     highlight_all(doc)
