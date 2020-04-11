@@ -1,6 +1,8 @@
 impress-code-highlighter
 ========================
 
+**Warning:** this script is not maintained anymore.
+
 A python macro for source code highlighting in LibreOffice Impress.
 
 ## How to test it
